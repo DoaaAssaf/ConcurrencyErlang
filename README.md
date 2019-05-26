@@ -1,4 +1,5 @@
 # ConcurrencyErlang
+
 __The problem:__
 In an emergency department facility in a hospital, patients arrive without prior appointment. They are sent to triage to determine
 their priority. There are 3 types of priority, 1, 2 and 3. Patients with priority 3 are considered more urgent and are seen before
