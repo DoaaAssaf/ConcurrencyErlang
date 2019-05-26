@@ -50,8 +50,8 @@ hospital()->
     {priorityWasGiven,_,From}->
       %% just for test the patients queue and the health prividers service
       %%  we can send back all the patients in our table we can use the following
-       From!{ets:match(patient_table, '$1')},
-%%      From!{done,'the patient data was inserted successfully!'},
+      %%       From!{ets:match(patient_table, '$1')},
+       From!{done,'the patient data was inserted successfully!'},
       hospital();
 
     %% if we couldn't find the injury type in our list, the triage will return error message
