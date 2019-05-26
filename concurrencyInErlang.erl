@@ -10,26 +10,10 @@
 -author("Doaa").
 
 %% API
--export([demo1/0,start/0,loop/0,area/2,loop1/0,echo/0,sendMsg/2,loop3/2,loop3/3,pause/0,stop/0,continue/0]).
+-export([start/0,loop/0,area/2,loop1/0,echo/0,sendMsg/2]).
 
 
-generate_exception(1) -> a;
-generate_exception(2) -> throw(a);
-generate_exception(3) -> exit(a);
-generate_exception(4) -> {'EXIT', a};
-generate_exception(5) -> erlang:error(a).
-
-demo1() ->
-  [catcher(I) || I <- [1,2,3,4,5]].
-catcher(N) ->
-  try generate_exception(N) of
-    Val -> {N, normal, Val}
-  catch
-    throw:X -> {N, caught, thrown, X};
-    exit:X -> {N, caught, exited, X};
-    error:X -> {N, caught, error, X}
-  end.
-
+%%calculate the square area of a shape
 start() -> spawn(fun loop/0).
 
 area(Pid, What) ->
@@ -55,17 +39,20 @@ loop() ->
       loop()
   end.
 
+
+
+%%if the process receives the message "ping", returns "pong" and otherwise returns "pang".
 echo() ->
   spawn(concurrencyInErlang,loop1,[]).
 
 loop1() ->
   receive
     {From,Msg} when Msg=:="Ping" ->
-      io:format("Mensagem de ~w : ~w~n",[From,Msg]),
+      io:format("Msg ~w : ~w~n",[From,Msg]),
       From!"pong",
       loop();
     {From,Msg}->
-      io:format("Mensagem de ~w : ~w~n",[From,Msg]),
+      io:format("Msg ~w : ~w~n",[From,Msg]),
       From!"pang",
       loop()
   end.
