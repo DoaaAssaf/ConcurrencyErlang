@@ -26,7 +26,9 @@ __How to run the hospitalV4?__
     ```hospitalV4:addPatient("wewewa","broken arm").```
     
  _p.s._
+ 
  don't forget the . after each command and accessing the dir in which erlang file is exist:
      ```cd("your\full\path").```
+     
  More details about the code in the comments.
  
