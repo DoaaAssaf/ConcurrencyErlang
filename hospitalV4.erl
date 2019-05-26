@@ -13,7 +13,7 @@
 -export([start/0,start_hospital/0,hospital/0,lookup/2,addPatient/2,triage/0,provider/0]).
 start_hospital() ->
   register(hospital,spawn(hospitalV4,hospital,[])),
-  register(tr,spawn(hospitalV4,triage,[])),
+  register(tr,spawn(hospitalV4,triage,[])),  
   register(provider,spawn(hospitalV4,provider,[])),
   start().
 
