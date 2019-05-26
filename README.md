@@ -6,9 +6,10 @@ In an emergency department facility in a hospital, patients arrive without prior
 their priority. There are 3 types of priority, 1, 2 and 3. Patients with priority 3 are considered more urgent and are seen before
 patients with priority 2 or 1 even if they arrived first and patients with priority 2 are seen before patients with priority 1.
 Thid Erlang-based application simulates this process. Implement:
-One process for the triage.
-A central process to store waiting patients and their priority.
-One processes for health providers that will see these patients removing them from the central process queue.
+
+- One process for the triage.
+- A central process to store waiting patients and their priority.
+- One processes for health providers that will see these patients removing them from the central process queue.
 
 __Designing the solution:__
 
