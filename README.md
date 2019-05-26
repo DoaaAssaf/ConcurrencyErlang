@@ -13,7 +13,8 @@ One processes for health providers that will see these patients removing them fr
 __Designing the solution:__
 
 Using ETS (Erlang Term Storage) which is a built-in application that allows developers to create ram based key-value storage objects.
-i created a shared table between the process. they are all able to access it for read and write. 
+I created a shared table between the process. They are all able to access it for reading or writing. 
+
 
 __How to run the hospitalV4?__
 
@@ -24,3 +25,8 @@ __How to run the hospitalV4?__
 3. call the add_patient to add new patient 
     ```hospitalV4:addPatient("wewewa","broken arm").```
     
+ _p.s._
+ don't forget the . after each command and accessing the dir in which erlang file is exist:
+     ```cd("your\full\path").```
+ More details about the code in the comments.
+ 
