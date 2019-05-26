@@ -24,7 +24,7 @@ __How to run the hospitalV4?__
 2. run the start_hospital:
     ```hospitalV4:start_hospital().```
 3. call the add_patient to add new patient 
-    ```hospitalV4:addPatient("wewewa","broken arm").```
+    ```hospitalV4:add_patient("wewewa","broken arm").```
     
  _p.s._
  
